@@ -13,6 +13,18 @@ public class Queue<T> {
         list.addLast(item);
     }
 
+    T dequeue() {
+        return list.removeFirst();
+    }
+
+    boolean isEmpty() {
+        return list.isEmpty();
+    }
+
+    int size() {
+        return list.size();
+    }
+
     public String toString() {
         return list.toString();
     }
@@ -22,6 +34,9 @@ public class Queue<T> {
         nums.enQueue(56);
         nums.enQueue(30);
         nums.enQueue(70);
-        System.out.println(nums);
+        System.out.println("Elements in Queue: " + nums);
+        System.out.println("Size of Queue: " + nums.size());
+        while (!nums.isEmpty())
+            System.out.println("After removing " + nums.dequeue() + " Queue: " + nums);
     }
 }
