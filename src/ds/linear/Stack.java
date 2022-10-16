@@ -25,6 +25,10 @@ public class Stack<T> {
         return list.size();
     }
 
+    boolean isEmpty() {
+        return list.isEmpty();
+    }
+
     void show() {
         System.out.println(list);
     }
@@ -39,7 +43,9 @@ public class Stack<T> {
         nums.show();
 
         int size = nums.size();
-        for (int i = 0; i < size; i++) {
+        System.out.println("Size of stack: " + size);
+
+        while (! nums.isEmpty()) {
             System.out.println(nums.peek());
             nums.pop();
         }
